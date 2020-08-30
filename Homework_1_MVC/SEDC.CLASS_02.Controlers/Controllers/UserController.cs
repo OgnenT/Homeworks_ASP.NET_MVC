@@ -10,8 +10,6 @@ namespace SEDC.CLASS_02.Controlers.Controllers
     [Route("users")]
     public class UserController : Controller
     {
-
-        //[HttpPost]
         [HttpGet]
         [Route("Start")]
         public IActionResult Index() // localhost:[PORT]/user/index
@@ -28,19 +26,6 @@ namespace SEDC.CLASS_02.Controlers.Controllers
             return View(model);
         }
 
-        [HttpDelete]
-        [Route("Delete")]
-        public IActionResult Index(UserModel selectedUser)
-        {
-            UserModel userToDelete = new UserModel();
-            if (userToDelete == selectedUser)
-            {
-                StaticDb.Users.Remove(userToDelete);
-            }
-
-            return View("Start");
-        }
-
         [HttpGet]
         [Route("createUserForm")]
         public IActionResult CreateUser()
@@ -48,8 +33,9 @@ namespace SEDC.CLASS_02.Controlers.Controllers
             return View();
         }
 
+
         [HttpPost]
-        [Route("CreateNewUser")]
+        [Route("createUserForm")]
         public IActionResult CreateUser(UserModel model) // localhost:[PORT]/user/index
         {
             UserModel user = new UserModel()
@@ -59,11 +45,26 @@ namespace SEDC.CLASS_02.Controlers.Controllers
                 Id = StaticDb.Users.Count + 1
             };
             StaticDb.Users.Add(user);
-            // localhost:[Port]/user/index
             return RedirectToAction("Index");
-
         }
+
+        [HttpGet]
+        [Route("delete/{id:int}")]
+        public IActionResult DeleteUser(int id)
+        {
+            UserModel model = StaticDb.Users.SingleOrDefault(u => u.Id == id);
+            return View(model);
+        }
+
+        [HttpPost]
+        [Route("delete/{id:int}")]
+        public IActionResult DeleteUserById(int id)
+        {
+            UserModel model = StaticDb.Users.SingleOrDefault(u => u.Id == id);
+            StaticDb.Users.Remove(model);
+            return RedirectToAction("Index");
+        }
+
+        //[HttpGet]
     }
 }
-
-// 

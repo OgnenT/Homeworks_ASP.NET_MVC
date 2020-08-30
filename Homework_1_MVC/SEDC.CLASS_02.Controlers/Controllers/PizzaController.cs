@@ -26,18 +26,6 @@ namespace SEDC.CLASS_02.Controlers.Controllers
         }
 
         [HttpGet]
-        [Route("delete/{id:int}")]
-        public IActionResult DeletePizza(int id)
-        {
-            PizzaModel pizza = PizzaDb.Pizza.SingleOrDefault(p => p.Id == id);
-            PizzaDb.Pizza.Remove(pizza);
-
-            return RedirectToAction("Index");
-        }
-
-
-
-        [HttpGet]
         [Route("createPizzaForm")]
         public IActionResult CreatePizza()
         {
@@ -45,16 +33,34 @@ namespace SEDC.CLASS_02.Controlers.Controllers
         }
 
         [HttpPost]
-        [Route("createNewPizza")]
+        [Route("createPizzaForm")]
         public IActionResult CreatePizza(PizzaModel insertPizza)
         {
             PizzaModel pizza = new PizzaModel()
             {
-                Id = insertPizza.Id,
+                Id = PizzaDb.Pizza.Count + 1,
                 PizzaName = insertPizza.PizzaName,
                 Size = insertPizza.Size
             };
             PizzaDb.Pizza.Add(pizza);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Route("delete/{id:int}")]
+        public IActionResult DeletePizza(int id)
+        {
+            PizzaModel models = PizzaDb.Pizza.FirstOrDefault(p => p.Id == id);
+            return View(models);
+        }
+
+        [HttpPost]
+        [Route("delete/{id:int}")]
+        public IActionResult DeletePizzaById(int id)
+        {
+            PizzaModel delete = PizzaDb.Pizza.FirstOrDefault(p => p.Id == id);
+            PizzaDb.Pizza.Remove(delete);
+
             return RedirectToAction("Index");
         }
     }

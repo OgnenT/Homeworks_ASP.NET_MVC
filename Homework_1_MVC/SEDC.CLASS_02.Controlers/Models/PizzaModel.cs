@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SEDC.CLASS_02.Controlers.Models
 {
-    public enum PizzaSize { small, medium, large }
+    public enum PizzaSize { Small, Medium, Large }
     public class PizzaModel
     {
         public int Id { get; set; }

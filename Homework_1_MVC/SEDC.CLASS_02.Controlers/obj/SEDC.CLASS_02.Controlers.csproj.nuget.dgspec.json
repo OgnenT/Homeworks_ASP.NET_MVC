@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj": {}
+    "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homeworks_ASP.NET_MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj": {}
   },
   "projects": {
-    "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj": {
+    "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homeworks_ASP.NET_MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj",
+        "projectUniqueName": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homeworks_ASP.NET_MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj",
         "projectName": "SEDC.CLASS_02.Controlers",
-        "projectPath": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj",
+        "projectPath": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homeworks_ASP.NET_MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\SEDC.CLASS_02.Controlers.csproj",
         "packagesPath": "C:\\Users\\Ognen\\.nuget\\packages\\",
-        "outputPath": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\obj\\",
+        "outputPath": "D:\\Ognen\\SEDC\\MVC\\Homeworks-MVC\\Homeworks_ASP.NET_MVC\\Homework_1_MVC\\SEDC.CLASS_02.Controlers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
