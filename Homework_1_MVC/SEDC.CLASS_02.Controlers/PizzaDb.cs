@@ -13,9 +13,9 @@ namespace SEDC.CLASS_02.Controlers
         {
             Pizza = new List<PizzaModel>()
             {
-                new PizzaModel(){ Id = 1, PizzaName = "Capricciosa", Size = PizzaSize.Small },
-                new PizzaModel(){ Id = 2, PizzaName = "Siciliana", Size = PizzaSize.Medium },
-                new PizzaModel(){ Id = 3, PizzaName = "Calzone", Size = PizzaSize.Large }
+                new PizzaModel(){ Id = 1, PizzaName = "Capricciosa", Size = PizzaSize.Small, Ingredients = { "garlic","mushrooms"} },
+                new PizzaModel(){ Id = 2, PizzaName = "Siciliana", Size = PizzaSize.Medium, Ingredients = { "cheese","paprika"}  },
+                new PizzaModel(){ Id = 3, PizzaName = "Calzone", Size = PizzaSize.Large, Ingredients = { "tomato","bacon"}  }
             };
         }
     }

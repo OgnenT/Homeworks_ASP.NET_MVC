@@ -13,13 +13,16 @@
     <thead>
         <tr>
             @*<th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>*@
+            @Html.DisplayNameFor(model => model.Id)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.PizzaName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredients)
             </th>
             <th></th>
         </tr>
@@ -28,8 +31,8 @@
 @foreach (var item in Model) {
         <tr>
             @*<td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>*@
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.PizzaName)
             </td>
@@ -37,9 +40,12 @@
                 @Html.DisplayFor(modelItem => item.Size)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
-                @Html.ActionLink("Details", "PizzaDetails", new {  id=item.Id  }) |
-                @Html.ActionLink("Delete", "DeletePizza", new {  id=item.Id })
+                @Html.DisplayFor(modelItem => item.Ingredients)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "PizzaDetails", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "DeletePizza", new { id = item.Id })
             </td>
         </tr>
 }
